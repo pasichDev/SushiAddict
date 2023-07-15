@@ -1,0 +1,18 @@
+{
+    "require": {
+        "slim/slim": "3.12.*",
+        "vlucas/phpdotenv": "^5.5",
+        "guzzlehttp/guzzle": "7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "NosoProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andrii Pasichnik (pasichDev)",
+            "email": "pasichDev@outlook.com"
+        }
+    ]
+}
