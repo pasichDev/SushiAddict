@@ -1,24 +1,10 @@
-# sushiaddict
-
-## Project setup
-```
-npm install
-```
+# Sushi Addict
 
 ### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
+### Start Backend
 ```
-npm run build
+php -S localhost:8080 -t webroot
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
