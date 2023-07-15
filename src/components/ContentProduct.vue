@@ -1,11 +1,30 @@
 <template>
-  <div class="tabs">
-
+  <div class="tabs is-toggle">
     <ul>
-    <li class="is-active"><a>Pictures</a></li>
-    <li><a>Music</a></li>
-    <li><a>Videos</a></li>
-    <li><a>Documents</a></li>
+      <li class="is-active">
+        <a>
+
+          <span>Акційні</span>
+        </a>
+      </li>
+      <li>
+        <a>
+
+          <span>Сети</span>
+        </a>
+      </li>
+      <li>
+        <a>
+
+          <span>Напої</span>
+        </a>
+      </li>
+      <li>
+        <a>
+
+          <span>Макі</span>
+        </a>
+      </li>
     </ul>
   </div>
 </template>

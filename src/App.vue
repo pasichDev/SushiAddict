@@ -1,10 +1,14 @@
 <template >
   <div class="container">
     <Header></Header>
-
-    <ContentProduct></ContentProduct>
+    <div class="body"><ContentProduct></ContentProduct></div>
     <Footer></Footer>
 
+  </div>
+  <div class="fab-container">
+    <button class="fab">
+      <img src="cart-outline.svg" style="padding: 18%;">
+    </button>
   </div>
 </template>
 
@@ -22,18 +26,4 @@ export default {
 }
 </script>
 
-<style>
-:root {
-  --bg-color: #000000;
-}
 
-.body {
-  padding: 20px;
-  background: #EBEBEB;
-}
-
-.control {
-  padding: 15px;
-  background: #EBEBEB;
-}
-</style>
