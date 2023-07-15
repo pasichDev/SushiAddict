@@ -18,6 +18,7 @@ $container['notFoundHandler'] = function ($container) {
     };
 };
 
+
 $container['POST'] = function ($container) {
     return $container->request->getParsedBody();
 };
@@ -42,9 +43,15 @@ $container['db'] = function ($container) {
 /**
  * Request settings faucet from the database
  */
-$container['FaucetSettings'] = function ($container) {
+$container['AppSettings'] = function ($container) {
     $Set = $container->get('db')->prepare("SELECT * FROM `settings`");
     $Set->execute();
 
     return $Set->fetch(\PDO::FETCH_ASSOC);
+};
+
+
+
+$container['APIFontController'] = function ($container) {
+    return new \SushiApp\Controllers\APIFontController($container);
 };

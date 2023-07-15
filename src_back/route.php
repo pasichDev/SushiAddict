@@ -8,3 +8,7 @@ $app->get('/', function (Request $request, Response $response) {
     $response->getBody()->write("Тимчасова сторінка, в майбутньому потрібно видалити");
     return $response;
 });
+
+
+
+$app->get('/api_font/{key_api}', 'APIFontController:index');

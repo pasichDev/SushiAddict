@@ -6,7 +6,7 @@
     },
     "autoload": {
         "psr-4": {
-            "NosoProject\\": "src/"
+            "SushiApp\\": "src_back/"
         }
     },
     "authors": [

@@ -19,6 +19,9 @@ return [
             'Database' => $_ENV['DATABASE'],
             'Username' => $_ENV['DATABASE_USER'],
             'Password' => $_ENV['DATABASE_PASSWORD']
+        ],
+        'API_KEYS' => [
+            'API_KEY_FONT' => $_ENV['PUBLIC_FRONT_ACCES_TOKEN_API']
         ]
     ]
 
