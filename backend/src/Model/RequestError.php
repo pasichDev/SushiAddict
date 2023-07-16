@@ -13,13 +13,13 @@ class RequestError
         $this->message = $message;
     }
 
-    public function toJson()
+    public function toArray()
     {
-        return json_encode([
+        return [
             'status' =>  [
                 'code' => $this->code,
                 'message' => $this->message
             ]
-        ]);
+        ];
     }
 }

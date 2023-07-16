@@ -7,21 +7,18 @@ class RequestSuccess
 {
     private $code = 100;
     private $message = "Success";
-    private $request;
 
-    public function __construct($request)
+    public function __construct()
     {
-        $this->request = $request;
     }
 
-    public function toJson()
+    public function toArray()
     {
-        return json_encode([
+        return [
             'status' =>  [
                 'code' => $this->code,
                 'message' => $this->message
-            ],
-            'Request' => ['test' => $this->request]
-        ]);
+            ]
+        ];
     }
 }

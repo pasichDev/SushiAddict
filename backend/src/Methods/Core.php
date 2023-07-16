@@ -9,6 +9,6 @@ final class Core
     static function decoderLink($link)
     {
         parse_str($link, $result);
-        return new ParramLink($result['key_api'], $result['action']);
+        return new ParramLink($result['key_api'], $result['action'], preg_replace('/\D/', '', $result['q']));
     }
 }
