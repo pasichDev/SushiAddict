@@ -8,7 +8,7 @@ final class Core
 {
     static function decoderLink($link)
     {
-        $data = explode('&', $link);
-        return new ParramLink(explode("=", $data[0])[1], explode("=", $data[1])[1]);
+        parse_str($link, $result);
+        return new ParramLink($result['key_api'], $result['action']);
     }
 }
