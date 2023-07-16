@@ -56,6 +56,6 @@ $container['AuthController'] = function ($container) {
 };
 */
 
-$container['FrontendApi'] = function ($c) {
-    return new App\Controller\ApiFrontend($c);
+$container['ApiFrontend'] = function ($container) {
+    return new \App\Controller\ApiFrontend($container);
 };

@@ -32,8 +32,8 @@ class ApiFontModel
 
         return   [
             'error' => [
-                'code' => API_NOT_VALID_CODE,
-                'message' => API_NOT_VALID
+                'code' => 'API_NOT_VALID_CODE',
+                'message' => 'Invalid API key'
             ],
         ];
     }

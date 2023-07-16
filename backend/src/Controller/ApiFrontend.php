@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+
 use App\Model\ApiFontModel;
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
@@ -19,15 +20,10 @@ final class ApiFrontend
 
     public function index(Request $request, Response $response, $args)
     {
-        $keyApi = $args['key_api'];
 
-        $data = [
-            'key_api' => $keyApi,
-            'message' => 'Success',
-        ];
+        $data = $this->AuthModel->checkAPI_KEY($args['key_api']);
 
-        return $response->withHeader('Content-Type', 'application/json')
-            ->getBody()
-            ->write(json_encode($this->AuthModel->checkAPI_KEY($keyApi)));
+        $response->getBody()->write(json_encode($data));
+        return $response->withHeader('Content-Type', 'application/json');
     }
 }

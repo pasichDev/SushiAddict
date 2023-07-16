@@ -9,4 +9,4 @@ $app->get('/', function (Request $request, Response $response) {
     return $response;
 });
 
-$app->get('/api_font/{key_api}', 'FrontendApi:index');
+$app->get('/api_font/{key_api}', 'ApiFrontend:index');
