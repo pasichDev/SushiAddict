@@ -2,11 +2,14 @@
 
 namespace App\Model;
 
+use App\Methods\Core;
+
 class ApiFontModel
 {
     private $DB;
     protected $container;
     private $settings;
+
 
     public function __construct($container)
     {
@@ -15,24 +18,25 @@ class ApiFontModel
         $this->DB = $container->get('db');
     }
 
-    public function checkAPI_KEY($API_KEY)
+    public function router($parram)
     {
-        if ($this->settings['PUBLIC_FRONT_ACCES_TOKEN_API'] == $API_KEY) {
+
+        $ParramLink = Core::decoderLink($parram);
+
+
+        if ($this->settings['API_KEY_FONT'] == $ParramLink) {
             return $this->KEY_API_SUCCES();
-        }
-        return $this->KEY_API_FAIL();
+        } else
+            return $ParramLink;
     }
 
 
-    /*
-Це метод перенести в окреми клас 
-*/
     public function KEY_API_FAIL()
     {
 
         return   [
             'error' => [
-                'code' => 'API_NOT_VALID_CODE',
+                'code' => 'Invalid API key',
                 'message' => 'Invalid API key'
             ],
         ];
