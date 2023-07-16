@@ -8,12 +8,13 @@ $dotenv->load();
 $dotenv->safeLoad();
 
 //Check empty env
-$dotenv->required(['DATABASE_HOST', 'DATABASE', 'DATABASE_USER'])->notEmpty();
+$dotenv->required(['DATABASE_HOST', 'DATABASE', 'DATABASE_USER', 'LINK_FRONTEND'])->notEmpty();
 
 return [
     'settings' => [
         'addContentLengthHeader' => false,
         'displayErrorDetails' => true,
+        'frontend_link' => $_ENV['LINK_FRONTEND'],
         'db' => [
             'Host' => $_ENV['DATABASE_HOST'],
             'Database' => $_ENV['DATABASE'],

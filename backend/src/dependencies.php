@@ -2,20 +2,7 @@
 
 $container = $app->getContainer();
 
-$container['notAllowedHandler'] = function ($container) {
-    return function ($request, $response) use ($container) {
 
-        return $response->withHeader('Location', '/')->withStatus(302);
-    };
-};
-
-
-$container['notFoundHandler'] = function ($container) {
-    return function ($request, $response) use ($container) {
-
-        return $response->withHeader('Location', '/')->withStatus(302);
-    };
-};
 
 
 $container['POST'] = function ($container) {
@@ -50,11 +37,21 @@ $container['AppSettings'] = function ($container) {
 };
 
 
-/*
-$container['AuthController'] = function ($container) {
-    return new \App\Controllers\ApiFrontend($container);
+$container['notAllowedHandler'] = function ($container) {
+    return function ($request, $response) use ($container) {
+
+        return $response->withHeader('Location', $container->get('settings')['frontend_link'])->withStatus(302);
+    };
 };
-*/
+
+
+$container['notFoundHandler'] = function ($container) {
+    return function ($request, $response) use ($container) {
+
+        return $response->withHeader('Location', $container->get('settings')['frontend_link'])->withStatus(302);
+    };
+};
+
 
 $container['ApiFrontend'] = function ($container) {
     return new \App\Controller\ApiFrontend($container);
