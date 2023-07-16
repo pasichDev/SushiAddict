@@ -1,12 +1,12 @@
 <?php
 
-namespace SushiApp\Controllers;
+namespace App\Controller;
 
-use SushiApp\Model\APIFontModel;
+use App\Model\ApiFontModel;
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-final class APIFontController
+final class ApiFrontend
 {
     protected $container;
     protected $AuthModel;
@@ -14,7 +14,7 @@ final class APIFontController
     public function __construct($container)
     {
         $this->container = $container;
-        $this->AuthModel = new APIFontModel($container);
+        $this->AuthModel = new ApiFontModel($container);
     }
 
     public function index(Request $request, Response $response, $args)
@@ -26,6 +26,8 @@ final class APIFontController
             'message' => 'Success',
         ];
 
-        return $response->withHeader('Content-Type', 'application/json')->write(json_encode($this->AuthModel->checkAPI_KEY($keyApi)));
+        return $response->withHeader('Content-Type', 'application/json')
+            ->getBody()
+            ->write(json_encode($this->AuthModel->checkAPI_KEY($keyApi)));
     }
 }

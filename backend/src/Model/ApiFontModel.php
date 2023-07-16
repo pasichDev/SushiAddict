@@ -1,8 +1,8 @@
 <?php
 
-namespace SushiApp\Model;
+namespace App\Model;
 
-class APIFontModel
+class ApiFontModel
 {
     private $DB;
     protected $container;

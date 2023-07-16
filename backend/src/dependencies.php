@@ -1,6 +1,5 @@
 <?php
 
-
 $container = $app->getContainer();
 
 $container['notAllowedHandler'] = function ($container) {
@@ -51,7 +50,12 @@ $container['AppSettings'] = function ($container) {
 };
 
 
+/*
+$container['AuthController'] = function ($container) {
+    return new \App\Controllers\ApiFrontend($container);
+};
+*/
 
-$container['APIFontController'] = function ($container) {
-    return new \SushiApp\Controllers\APIFontController($container);
+$container['FrontendApi'] = function ($c) {
+    return new App\Controller\ApiFrontend($c);
 };
