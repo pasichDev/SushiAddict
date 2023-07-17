@@ -1,13 +1,17 @@
 <template >
   <div class="container">
     <Header></Header>
-    <div class="body"><ContentProduct></ContentProduct></div>
+    <div class="body">
+      <ContentProduct>
+      </ContentProduct>
+    </div>
+
     <Footer></Footer>
 
   </div>
   <div class="fab-container">
-    <button class="fab">
-      <img src="cart-outline.svg" style="padding: 18%;">
+    <button class="fab has-background-danger">
+      <img src="@/assets/images/cart.svg" style="padding: 18%;">
     </button>
   </div>
 </template>

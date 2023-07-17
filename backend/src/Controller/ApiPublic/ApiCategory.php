@@ -5,7 +5,7 @@ namespace App\Controller\ApiPublic;
 
 use App\Controller\ApiPublic\ApiPublic;
 
-use App\Model\RequestProduct;
+use App\Model\RequestCategory;
 
 final class ApiCategory extends ApiPublic
 {
@@ -31,7 +31,7 @@ final class ApiCategory extends ApiPublic
         $connect = $this->DB->prepare('SELECT * FROM category');
         $connect->execute();
         $results = $connect->fetchAll(\PDO::FETCH_ASSOC);
-        $requestSucces = new RequestProduct($results);
+        $requestSucces = new RequestCategory($results);
         return $requestSucces->toArrays();
     }
 }

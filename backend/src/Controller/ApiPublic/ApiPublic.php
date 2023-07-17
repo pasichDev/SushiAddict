@@ -31,7 +31,7 @@ class ApiPublic
     {
         $this->linkParram = Core::decoderLink($args['parram_q']);
         $response->getBody()->write(json_encode($this->router(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
-        return $response->withHeader('Content-Type', 'application/json');
+        return $response->withHeader('Content-Type', 'application/json')->withHeader('Access-Control-Allow-Origin', '*');
     }
 
 

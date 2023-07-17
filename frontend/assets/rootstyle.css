@@ -2,6 +2,19 @@
     --bg-color: #000000;
 }
 
+@font-face {
+    font-family: 'Chalkduster';
+    src: url('fonts/YsabeauInfant.ttf') format('truetype');
+
+
+}
+@font-face {
+    font-family: 'YsabeauInfant';
+    src: url('fonts/YsabeauInfant.ttf') format('truetype');
+
+
+}
+
 .body {
     padding: 20px;
 }
@@ -34,4 +47,13 @@
 
 .fab:hover {
     background-color: #0069d9;
+}
+
+.my-header-title {
+    font-family: 'Chalkduster';
+}
+
+.my-header-subtitle {
+    font-family: 'YsabeauInfant';
+
 }

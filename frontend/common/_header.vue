@@ -1,23 +1,27 @@
 <template>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="">
-                <img src="logo.svg" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="112"
-                    height="28">
-            </a>
+    <section class="section ">
+        <div class="columns is-vcentered ">
+            <div class="column is-8">
+                <h1 class="title is-size-3 my-header-title has-text-danger">{{ projectName }}</h1>
+                <h2 class="subtitle is-size-5 my-header-subtitle">
+                    {{ decription }}
+                </h2>
+            </div>
+            <div class="column">
 
-
+            </div>
         </div>
-    </nav>
+    </section>
 </template>
 
 <script>
-import { PROJECT_NAME } from '../constants.js';
+import { PROJECT_NAME, PROJECT_DESCRIPTION } from '../constants.js';
 
 export default {
     data() {
         return {
-            projectName: PROJECT_NAME
+            projectName: PROJECT_NAME,
+            decription: PROJECT_DESCRIPTION
         };
     }
 }
