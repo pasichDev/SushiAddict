@@ -15,22 +15,22 @@
     </button>
   </div>
 
- 
-  <ModalComponent ref="modal"></ModalComponent>
+
+  <CartDialog ref="modal"></CartDialog>
 </template>
 
 <script>
 import Header from './common/_header.vue'
 import Footer from './common/_footer.vue'
-import ContentProduct from './components/ContentProduct.vue'
-import ModalComponent from './common/_cart.vue';
+import ContentProduct from '@/components/ContentProduct.vue'
+import CartDialog from './components/CartDialog.vue';
 export default {
   name: 'App',
   components: {
     Header,
     Footer,
     ContentProduct,
-    ModalComponent,
+    CartDialog,
   },
   methods: {
     openModal() {
