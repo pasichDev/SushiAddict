@@ -36,7 +36,7 @@ composer install
 | Parameter        | Type   | Description                                     |
 | ---------------- | ------ | ----------------------------------------------- |
 | api_token_public | string | API access token for clients (web, mobile app)  |
-| action_category  | string | Key actions                                     |
+| action           | string | Key actions                                     |
 | q                | int    | An additional parameter required by the request |
 
 ### Actions Category
