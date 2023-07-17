@@ -1,5 +1,5 @@
 <template >
-    <div class="notification">ERROR</div>
+    <div class="notification">Помилка завнтаження вмісту</div>
 </template>
 
 
