@@ -6,10 +6,12 @@ namespace App\Methods;
 class Actions
 {
 
-    public $loadProduct;
+    public $allCategoryLoad;
+    public $loadProductFromCategory;
 
     public function __construct()
     {
-        $this->loadProduct = "loadProducts";
+        $this->allCategoryLoad = "getAll";
+        $this->loadProductFromCategory = "getProductFromCategory";
     }
 }

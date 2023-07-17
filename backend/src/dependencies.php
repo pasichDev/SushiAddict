@@ -53,6 +53,10 @@ $container['notFoundHandler'] = function ($container) {
 };
 
 
-$container['ApiFrontend'] = function ($container) {
-    return new \App\Controller\ApiFrontend($container);
+$container['ApiCategoryPublic'] = function ($container) {
+    return new  \App\Controller\ApiPublic\ApiCategory($container);
+};
+
+$container['ApiProductsPublic'] = function ($container) {
+    return new  \App\Controller\ApiPublic\ApiProducts($container);
 };

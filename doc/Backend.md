@@ -26,21 +26,30 @@ composer install
 
 ### API Routes
 
-| Method | Route              | Description             |
-| ------ | ------------------ | ----------------------- |
-| GET    | /api/resource      | Get all resources       |
-| GET    | /api/resource/{id} | Get a resource by ID    |
-| POST   | /api/resource      | Create a new resource   |
-| PUT    | /api/resource/{id} | Update a resource by ID |
-| DELETE | /api/resource/{id} | Delete a resource by ID |
+| Method | Route                                                                 | Description                           |
+| ------ | --------------------------------------------------------------------- | ------------------------------------- |
+| GET    | /api_public/category/key_api={api_token_public}&action={action}       | Get all categories                    |
+| GET    | /api_public/products/key_api={api_token_public}&action={action}&q={q} | Get products in the selected category |
 
 ### Request Parameters
 
-| Parameter | Type    | Description                  |
-| --------- | ------- | ---------------------------- |
-| id        | integer | Resource identifier          |
-| name      | string  | Resource name                |
-| data      | object  | Resource data in JSON format |
+| Parameter        | Type   | Description                                     |
+| ---------------- | ------ | ----------------------------------------------- |
+| api_token_public | string | API access token for clients (web, mobile app)  |
+| action_category  | string | Key actions                                     |
+| q                | int    | An additional parameter required by the request |
+
+### Actions Category
+
+| Actions | Description        |
+| ------- | ------------------ |
+| getAll  | Get all categories |
+
+### Actions Products
+
+| Actions                | Description                           |
+| ---------------------- | ------------------------------------- |
+| getProductFromCategory | Get products in the selected category |
 
 ### API Errors
 

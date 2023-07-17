@@ -22,7 +22,7 @@ return [
             'Password' => $_ENV['DATABASE_PASSWORD']
         ],
         'API_KEYS' => [
-            'API_KEY_FONT' => $_ENV['PUBLIC_FRONT_ACCES_TOKEN_API']
+            'API_KEY_PUBLIC' => $_ENV['PUBLIC_PUBLIC_ACCES_TOKEN_API']
         ]
     ]
 
