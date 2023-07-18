@@ -7,7 +7,7 @@
       <div v-else-if="error">
         <ErrorCommon></ErrorCommon>
       </div>
-      <ul>
+      <ul class="my-tabs-list">
         <li v-for="category in categories" :key="category.id" :class="{ 'is-active': selectedCategory == category.id }">
           <a class="list-item" @click="selectCategory(category.id)">
             <span>{{ category.name }}</span>
@@ -23,7 +23,12 @@
     </div>
   </section>
 </template>
+<style>
+.my-tabs-list li {
+  margin-right: 15px; 
+}
 
+</style>
 
 <script>
 import { API_BASE_URL, API_TOKEN } from '@/constants'

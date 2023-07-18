@@ -30,8 +30,7 @@ final class ApiCategory extends ApiPublic
 
         $connect = $this->DB->prepare('SELECT * FROM category');
         $connect->execute();
-        $results = $connect->fetchAll(\PDO::FETCH_ASSOC);
-        $requestSucces = new RequestCategory($results);
+        $requestSucces = new RequestCategory($connect->fetchAll(\PDO::FETCH_ASSOC));
         return $requestSucces->toArrays();
     }
 }
